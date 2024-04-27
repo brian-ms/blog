@@ -2,7 +2,8 @@
 {% extends "base.html" %}
 
 {% block content %}
-{% for post in post_list %}
+{% for post in post_list%}
+<!--Note that post_list comes from ListView and contains all the objects in our view of the model post.-->
 <div class="post-entry">
     <h2><a href="{% url 'post_detail' post.pk %}">{{ post.title}}</a></h2>
     <p>{{ post.body }}</p>
